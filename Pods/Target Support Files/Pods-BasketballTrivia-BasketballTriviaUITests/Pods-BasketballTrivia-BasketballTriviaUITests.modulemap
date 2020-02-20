@@ -1,0 +1,6 @@
+framework module Pods_BasketballTrivia_BasketballTriviaUITests {
+  umbrella header "Pods-BasketballTrivia-BasketballTriviaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

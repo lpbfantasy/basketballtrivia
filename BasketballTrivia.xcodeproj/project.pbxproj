@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CDBC88D4B5A6DCCC54B8B4E /* Pods_BasketballTrivia_BasketballTriviaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A6936EDE0FC0F5BBD829C1 /* Pods_BasketballTrivia_BasketballTriviaUITests.framework */; };
+		814DA91E23FBC75900A4830C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA91D23FBC75900A4830C /* AppDelegate.swift */; };
+		814DA92023FBC75900A4830C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA91F23FBC75900A4830C /* SceneDelegate.swift */; };
+		814DA92223FBC75900A4830C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA92123FBC75900A4830C /* ViewController.swift */; };
+		814DA92523FBC75900A4830C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814DA92323FBC75900A4830C /* Main.storyboard */; };
+		814DA92723FBC75A00A4830C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814DA92623FBC75A00A4830C /* Assets.xcassets */; };
+		814DA92A23FBC75A00A4830C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814DA92823FBC75A00A4830C /* LaunchScreen.storyboard */; };
+		814DA93523FBC75A00A4830C /* BasketballTriviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA93423FBC75A00A4830C /* BasketballTriviaTests.swift */; };
+		814DA94023FBC75B00A4830C /* BasketballTriviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA93F23FBC75B00A4830C /* BasketballTriviaUITests.swift */; };
+		814DA94E23FBD5E500A4830C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA94D23FBD5E500A4830C /* SignupVC.swift */; };
+		814DA95023FBD5F300A4830C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA94F23FBD5F300A4830C /* LoginVC.swift */; };
+		814DA95223FBDB4A00A4830C /* BBallTriviaSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */; };
+		819B9F6223FBEE2C0022B612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */; };
+		D2E5224E3E9F005784D04BE8 /* Pods_BasketballTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B595047DBE22462A988CBEC5 /* Pods_BasketballTrivia.framework */; };
+		D8720BE2906073AE3CCAC006 /* Pods_BasketballTriviaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F09A4FC3BDBCF401100D72 /* Pods_BasketballTriviaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		814DA93123FBC75A00A4830C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 814DA91223FBC75900A4830C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 814DA91923FBC75900A4830C;
+			remoteInfo = BasketballTrivia;
+		};
+		814DA93C23FBC75B00A4830C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 814DA91223FBC75900A4830C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 814DA91923FBC75900A4830C;
+			remoteInfo = BasketballTrivia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52D315EA63A2BC5C4E84842D /* Pods-BasketballTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTrivia.release.xcconfig"; path = "Target Support Files/Pods-BasketballTrivia/Pods-BasketballTrivia.release.xcconfig"; sourceTree = "<group>"; };
+		814DA91A23FBC75900A4830C /* BasketballTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasketballTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		814DA91D23FBC75900A4830C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		814DA91F23FBC75900A4830C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		814DA92123FBC75900A4830C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		814DA92423FBC75900A4830C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		814DA92623FBC75A00A4830C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		814DA92923FBC75A00A4830C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		814DA92B23FBC75A00A4830C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		814DA93023FBC75A00A4830C /* BasketballTriviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballTriviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		814DA93423FBC75A00A4830C /* BasketballTriviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballTriviaTests.swift; sourceTree = "<group>"; };
+		814DA93623FBC75A00A4830C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		814DA93B23FBC75B00A4830C /* BasketballTriviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballTriviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		814DA93F23FBC75B00A4830C /* BasketballTriviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballTriviaUITests.swift; sourceTree = "<group>"; };
+		814DA94123FBC75B00A4830C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		814DA94D23FBD5E500A4830C /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		814DA94F23FBD5F300A4830C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallTriviaSingleton.swift; sourceTree = "<group>"; };
+		819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81D840EAFB3434BD85103E60 /* Pods-BasketballTriviaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.release.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.release.xcconfig"; sourceTree = "<group>"; };
+		8340B81429F4EF77B6F844B0 /* Pods-BasketballTriviaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.debug.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		89F09A4FC3BDBCF401100D72 /* Pods_BasketballTriviaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballTriviaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA90FEE68354A3A6DC71DC0 /* Pods-BasketballTrivia-BasketballTriviaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTrivia-BasketballTriviaUITests.debug.xcconfig"; path = "Target Support Files/Pods-BasketballTrivia-BasketballTriviaUITests/Pods-BasketballTrivia-BasketballTriviaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B595047DBE22462A988CBEC5 /* Pods_BasketballTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A6936EDE0FC0F5BBD829C1 /* Pods_BasketballTrivia_BasketballTriviaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballTrivia_BasketballTriviaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF3D1E722E2B9BB2B652F4C /* Pods-BasketballTrivia-BasketballTriviaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTrivia-BasketballTriviaUITests.release.xcconfig"; path = "Target Support Files/Pods-BasketballTrivia-BasketballTriviaUITests/Pods-BasketballTrivia-BasketballTriviaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E4E506E94323FFB0ED327810 /* Pods-BasketballTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTrivia.debug.xcconfig"; path = "Target Support Files/Pods-BasketballTrivia/Pods-BasketballTrivia.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		814DA91723FBC75900A4830C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E5224E3E9F005784D04BE8 /* Pods_BasketballTrivia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814DA92D23FBC75A00A4830C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8720BE2906073AE3CCAC006 /* Pods_BasketballTriviaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814DA93823FBC75B00A4830C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CDBC88D4B5A6DCCC54B8B4E /* Pods_BasketballTrivia_BasketballTriviaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		814DA91123FBC75900A4830C = {
+			isa = PBXGroup;
+			children = (
+				814DA91C23FBC75900A4830C /* BasketballTrivia */,
+				814DA93323FBC75A00A4830C /* BasketballTriviaTests */,
+				814DA93E23FBC75B00A4830C /* BasketballTriviaUITests */,
+				814DA91B23FBC75900A4830C /* Products */,
+				F2855F4C3D0AF62211591CDD /* Pods */,
+				8A12E57E6905782DF12B83EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		814DA91B23FBC75900A4830C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				814DA91A23FBC75900A4830C /* BasketballTrivia.app */,
+				814DA93023FBC75A00A4830C /* BasketballTriviaTests.xctest */,
+				814DA93B23FBC75B00A4830C /* BasketballTriviaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		814DA91C23FBC75900A4830C /* BasketballTrivia */ = {
+			isa = PBXGroup;
+			children = (
+				8176B56F23FD140E00AA368E /* Model */,
+				8176B56E23FD13D300AA368E /* Login_Signup */,
+				814DA91D23FBC75900A4830C /* AppDelegate.swift */,
+				814DA91F23FBC75900A4830C /* SceneDelegate.swift */,
+				814DA92123FBC75900A4830C /* ViewController.swift */,
+				814DA92323FBC75900A4830C /* Main.storyboard */,
+				814DA92623FBC75A00A4830C /* Assets.xcassets */,
+				814DA92823FBC75A00A4830C /* LaunchScreen.storyboard */,
+				814DA92B23FBC75A00A4830C /* Info.plist */,
+				819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */,
+			);
+			path = BasketballTrivia;
+			sourceTree = "<group>";
+		};
+		814DA93323FBC75A00A4830C /* BasketballTriviaTests */ = {
+			isa = PBXGroup;
+			children = (
+				814DA93423FBC75A00A4830C /* BasketballTriviaTests.swift */,
+				814DA93623FBC75A00A4830C /* Info.plist */,
+			);
+			path = BasketballTriviaTests;
+			sourceTree = "<group>";
+		};
+		814DA93E23FBC75B00A4830C /* BasketballTriviaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				814DA93F23FBC75B00A4830C /* BasketballTriviaUITests.swift */,
+				814DA94123FBC75B00A4830C /* Info.plist */,
+			);
+			path = BasketballTriviaUITests;
+			sourceTree = "<group>";
+		};
+		8176B56E23FD13D300AA368E /* Login_Signup */ = {
+			isa = PBXGroup;
+			children = (
+				814DA94D23FBD5E500A4830C /* SignupVC.swift */,
+				814DA94F23FBD5F300A4830C /* LoginVC.swift */,
+			);
+			path = Login_Signup;
+			sourceTree = "<group>";
+		};
+		8176B56F23FD140E00AA368E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A12E57E6905782DF12B83EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B595047DBE22462A988CBEC5 /* Pods_BasketballTrivia.framework */,
+				B6A6936EDE0FC0F5BBD829C1 /* Pods_BasketballTrivia_BasketballTriviaUITests.framework */,
+				89F09A4FC3BDBCF401100D72 /* Pods_BasketballTriviaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2855F4C3D0AF62211591CDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4E506E94323FFB0ED327810 /* Pods-BasketballTrivia.debug.xcconfig */,
+				52D315EA63A2BC5C4E84842D /* Pods-BasketballTrivia.release.xcconfig */,
+				9BA90FEE68354A3A6DC71DC0 /* Pods-BasketballTrivia-BasketballTriviaUITests.debug.xcconfig */,
+				BEF3D1E722E2B9BB2B652F4C /* Pods-BasketballTrivia-BasketballTriviaUITests.release.xcconfig */,
+				8340B81429F4EF77B6F844B0 /* Pods-BasketballTriviaTests.debug.xcconfig */,
+				81D840EAFB3434BD85103E60 /* Pods-BasketballTriviaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		814DA91923FBC75900A4830C /* BasketballTrivia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 814DA94423FBC75B00A4830C /* Build configuration list for PBXNativeTarget "BasketballTrivia" */;
+			buildPhases = (
+				5FC9BEC9384B539F4EC18BE8 /* [CP] Check Pods Manifest.lock */,
+				814DA91623FBC75900A4830C /* Sources */,
+				814DA91723FBC75900A4830C /* Frameworks */,
+				814DA91823FBC75900A4830C /* Resources */,
+				18337E01728727D4B2FB73C9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasketballTrivia;
+			productName = BasketballTrivia;
+			productReference = 814DA91A23FBC75900A4830C /* BasketballTrivia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		814DA92F23FBC75A00A4830C /* BasketballTriviaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 814DA94723FBC75B00A4830C /* Build configuration list for PBXNativeTarget "BasketballTriviaTests" */;
+			buildPhases = (
+				635194ECAD99736A3B5A1DD5 /* [CP] Check Pods Manifest.lock */,
+				814DA92C23FBC75A00A4830C /* Sources */,
+				814DA92D23FBC75A00A4830C /* Frameworks */,
+				814DA92E23FBC75A00A4830C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				814DA93223FBC75A00A4830C /* PBXTargetDependency */,
+			);
+			name = BasketballTriviaTests;
+			productName = BasketballTriviaTests;
+			productReference = 814DA93023FBC75A00A4830C /* BasketballTriviaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		814DA93A23FBC75B00A4830C /* BasketballTriviaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 814DA94A23FBC75B00A4830C /* Build configuration list for PBXNativeTarget "BasketballTriviaUITests" */;
+			buildPhases = (
+				68543E6779714570C149D41D /* [CP] Check Pods Manifest.lock */,
+				814DA93723FBC75B00A4830C /* Sources */,
+				814DA93823FBC75B00A4830C /* Frameworks */,
+				814DA93923FBC75B00A4830C /* Resources */,
+				691FD775B3E25A4C8BE94B95 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				814DA93D23FBC75B00A4830C /* PBXTargetDependency */,
+			);
+			name = BasketballTriviaUITests;
+			productName = BasketballTriviaUITests;
+			productReference = 814DA93B23FBC75B00A4830C /* BasketballTriviaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		814DA91223FBC75900A4830C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = IOS;
+				TargetAttributes = {
+					814DA91923FBC75900A4830C = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					814DA92F23FBC75A00A4830C = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 814DA91923FBC75900A4830C;
+					};
+					814DA93A23FBC75B00A4830C = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 814DA91923FBC75900A4830C;
+					};
+				};
+			};
+			buildConfigurationList = 814DA91523FBC75900A4830C /* Build configuration list for PBXProject "BasketballTrivia" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 814DA91123FBC75900A4830C;
+			productRefGroup = 814DA91B23FBC75900A4830C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				814DA91923FBC75900A4830C /* BasketballTrivia */,
+				814DA92F23FBC75A00A4830C /* BasketballTriviaTests */,
+				814DA93A23FBC75B00A4830C /* BasketballTriviaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		814DA91823FBC75900A4830C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814DA92A23FBC75A00A4830C /* LaunchScreen.storyboard in Resources */,
+				819B9F6223FBEE2C0022B612 /* GoogleService-Info.plist in Resources */,
+				814DA92723FBC75A00A4830C /* Assets.xcassets in Resources */,
+				814DA92523FBC75900A4830C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814DA92E23FBC75A00A4830C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814DA93923FBC75B00A4830C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18337E01728727D4B2FB73C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasketballTrivia/Pods-BasketballTrivia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasketballTrivia/Pods-BasketballTrivia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasketballTrivia/Pods-BasketballTrivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FC9BEC9384B539F4EC18BE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasketballTrivia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		635194ECAD99736A3B5A1DD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasketballTriviaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68543E6779714570C149D41D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasketballTrivia-BasketballTriviaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		691FD775B3E25A4C8BE94B95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasketballTrivia-BasketballTriviaUITests/Pods-BasketballTrivia-BasketballTriviaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasketballTrivia-BasketballTriviaUITests/Pods-BasketballTrivia-BasketballTriviaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasketballTrivia-BasketballTriviaUITests/Pods-BasketballTrivia-BasketballTriviaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		814DA91623FBC75900A4830C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814DA95223FBDB4A00A4830C /* BBallTriviaSingleton.swift in Sources */,
+				814DA94E23FBD5E500A4830C /* SignupVC.swift in Sources */,
+				814DA92223FBC75900A4830C /* ViewController.swift in Sources */,
+				814DA91E23FBC75900A4830C /* AppDelegate.swift in Sources */,
+				814DA92023FBC75900A4830C /* SceneDelegate.swift in Sources */,
+				814DA95023FBD5F300A4830C /* LoginVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814DA92C23FBC75A00A4830C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814DA93523FBC75A00A4830C /* BasketballTriviaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814DA93723FBC75B00A4830C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814DA94023FBC75B00A4830C /* BasketballTriviaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		814DA93223FBC75A00A4830C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 814DA91923FBC75900A4830C /* BasketballTrivia */;
+			targetProxy = 814DA93123FBC75A00A4830C /* PBXContainerItemProxy */;
+		};
+		814DA93D23FBC75B00A4830C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 814DA91923FBC75900A4830C /* BasketballTrivia */;
+			targetProxy = 814DA93C23FBC75B00A4830C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		814DA92323FBC75900A4830C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				814DA92423FBC75900A4830C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		814DA92823FBC75A00A4830C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				814DA92923FBC75A00A4830C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		814DA94223FBC75B00A4830C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		814DA94323FBC75B00A4830C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		814DA94523FBC75B00A4830C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E506E94323FFB0ED327810 /* Pods-BasketballTrivia.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TGU9BZZTFV;
+				INFOPLIST_FILE = BasketballTrivia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.bballtrivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		814DA94623FBC75B00A4830C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52D315EA63A2BC5C4E84842D /* Pods-BasketballTrivia.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TGU9BZZTFV;
+				INFOPLIST_FILE = BasketballTrivia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.development.bballtrivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		814DA94823FBC75B00A4830C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8340B81429F4EF77B6F844B0 /* Pods-BasketballTriviaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BasketballTriviaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.development.BasketballTriviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BasketballTrivia.app/BasketballTrivia";
+			};
+			name = Debug;
+		};
+		814DA94923FBC75B00A4830C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81D840EAFB3434BD85103E60 /* Pods-BasketballTriviaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BasketballTriviaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.development.BasketballTriviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BasketballTrivia.app/BasketballTrivia";
+			};
+			name = Release;
+		};
+		814DA94B23FBC75B00A4830C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA90FEE68354A3A6DC71DC0 /* Pods-BasketballTrivia-BasketballTriviaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BasketballTriviaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.development.BasketballTriviaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BasketballTrivia;
+			};
+			name = Debug;
+		};
+		814DA94C23FBC75B00A4830C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF3D1E722E2B9BB2B652F4C /* Pods-BasketballTrivia-BasketballTriviaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BasketballTriviaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.development.BasketballTriviaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BasketballTrivia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		814DA91523FBC75900A4830C /* Build configuration list for PBXProject "BasketballTrivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814DA94223FBC75B00A4830C /* Debug */,
+				814DA94323FBC75B00A4830C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		814DA94423FBC75B00A4830C /* Build configuration list for PBXNativeTarget "BasketballTrivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814DA94523FBC75B00A4830C /* Debug */,
+				814DA94623FBC75B00A4830C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		814DA94723FBC75B00A4830C /* Build configuration list for PBXNativeTarget "BasketballTriviaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814DA94823FBC75B00A4830C /* Debug */,
+				814DA94923FBC75B00A4830C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		814DA94A23FBC75B00A4830C /* Build configuration list for PBXNativeTarget "BasketballTriviaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				814DA94B23FBC75B00A4830C /* Debug */,
+				814DA94C23FBC75B00A4830C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 814DA91223FBC75900A4830C /* Project object */;
+}
