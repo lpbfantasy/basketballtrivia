@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class SignupVC: UIViewController, UITextFieldDelegate {
     
@@ -51,34 +52,38 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         {
             if txtPassword.text == txtConfirmPassword.text
             {
-            Auth.auth().createUser(withEmail: txtEmail.text ?? "", password: txtPassword.text ?? "") { authResult, error in
-                guard let user = authResult?.user, error == nil else{
-                    BBallTriviaSingleton.shared.showAlert(title: "Error", message: error?.localizedDescription ?? "", twoBtn: false, btn1: "", btn2: "", VC: self)
-                    return
+               // BBallTriviaSingleton.shared.showLoader()
+                Auth.auth().createUser(withEmail: txtEmail.text ?? "", password: txtPassword.text ?? "") { authResult, error in
+                    guard let user = authResult?.user, error == nil else{
+                        BBallTriviaSingleton.shared.showAlert(title: "Error", message: error?.localizedDescription ?? "", twoBtn: false, btn1: "", btn2: "", VC: self)
+                        return
+                    }
+                    
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = self.txtName.text!
+                    changeRequest?.commitChanges { (error) in
+                        // ...
+                    }
+                    self.txtName.text = ""
+                    self.txtEmail.text = ""
+                    self.txtPassword.text = ""
+                    self.txtConfirmPassword.text = ""
+                    BBallTriviaSingleton.shared.hideLoader()
+                    BBallTriviaSingleton.shared.showAlert(title: "Success", message: "SignUp successfull!!", twoBtn: false, btn1: "", btn2: "", VC: self)
                 }
                 
-                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                changeRequest?.displayName = self.txtName.text!
-                changeRequest?.commitChanges { (error) in
-                    // ...
-                }
-                self.txtName.text = ""
-                self.txtEmail.text = ""
-                self.txtPassword.text = ""
-                self.txtConfirmPassword.text = ""
-                BBallTriviaSingleton.shared.showAlert(title: "Success", message: "SignUp successfull!!", twoBtn: false, btn1: "", btn2: "", VC: self)
-                }
-             
             }
             else
             {
+                 
                 BBallTriviaSingleton.shared.showAlert(title: "Alert", message: "The two passwords entered do not match!! Please try again.", twoBtn: false, btn1: "", btn2: "", VC: self)
             }
-                  
+            
             
         }
         else
         {
+            //BBallTriviaSingleton.shared.showLoader()
             BBallTriviaSingleton.shared.showAlert(title: "Alert", message: "Please enter your name!!", twoBtn: false, btn1: "", btn2: "", VC: self)
         }
         
@@ -89,14 +94,14 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         
         if #available(iOS 13.0, *) {
             let vc = storyboard?.instantiateViewController(identifier: "LoginVC") as! LoginVC
-             self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
         } else {
             // Fallback on earlier versions
             let vc = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-             self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
             
         }
-       
+        
         
         
     }

@@ -39,7 +39,18 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             }
             else
             {
-                BBallTriviaSingleton.shared.showAlert(title: "Success", message: "Logged in successfully!! \n\nUser id : \(String(describing: authResult!.user.uid))\n UserName: \(String(describing: authResult!.user.displayName!))", twoBtn: false, btn1: "", btn2: "", VC: self!)
+                if #available(iOS 13.0, *) {
+                    let vc = self?.storyboard?.instantiateViewController(identifier: "HomeVC") as! HomeVC
+                           self?.navigationController?.pushViewController(vc, animated: true)
+                       } else {
+                    let vc = self?.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                       }
+                
+                UserDefaults.standard.set("\(String(describing: authResult!.user.uid))", forKey: "userId")
+                 UserDefaults.standard.set("\(String(describing: authResult!.user.displayName!))", forKey: "userName")
+                
+                //BBallTriviaSingleton.shared.showAlert(title: "Success", message: "Logged in successfully!! \n\nUser id : \(String(describing: authResult!.user.uid))\n UserName: \(String(describing: authResult!.user.displayName!))", twoBtn: false, btn1: "", btn2: "", VC: self!)
             }
 
 

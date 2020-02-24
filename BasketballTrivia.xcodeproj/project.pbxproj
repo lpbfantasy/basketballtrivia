@@ -19,6 +19,7 @@
 		814DA94E23FBD5E500A4830C /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA94D23FBD5E500A4830C /* SignupVC.swift */; };
 		814DA95023FBD5F300A4830C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA94F23FBD5F300A4830C /* LoginVC.swift */; };
 		814DA95223FBDB4A00A4830C /* BBallTriviaSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */; };
+		8176B5AE23FD257A00AA368E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176B5AD23FD257A00AA368E /* HomeVC.swift */; };
 		819B9F6223FBEE2C0022B612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */; };
 		D2E5224E3E9F005784D04BE8 /* Pods_BasketballTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B595047DBE22462A988CBEC5 /* Pods_BasketballTrivia.framework */; };
 		D8720BE2906073AE3CCAC006 /* Pods_BasketballTriviaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F09A4FC3BDBCF401100D72 /* Pods_BasketballTriviaTests.framework */; };
@@ -60,6 +61,7 @@
 		814DA94D23FBD5E500A4830C /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		814DA94F23FBD5F300A4830C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallTriviaSingleton.swift; sourceTree = "<group>"; };
+		8176B5AD23FD257A00AA368E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81D840EAFB3434BD85103E60 /* Pods-BasketballTriviaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.release.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.release.xcconfig"; sourceTree = "<group>"; };
 		8340B81429F4EF77B6F844B0 /* Pods-BasketballTriviaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.debug.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		814DA91C23FBC75900A4830C /* BasketballTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				8176B5AC23FD255C00AA368E /* Home */,
 				8176B56F23FD140E00AA368E /* Model */,
 				8176B56E23FD13D300AA368E /* Login_Signup */,
 				814DA91D23FBC75900A4830C /* AppDelegate.swift */,
@@ -171,6 +174,14 @@
 				814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8176B5AC23FD255C00AA368E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8176B5AD23FD257A00AA368E /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8A12E57E6905782DF12B83EE /* Frameworks */ = {
@@ -437,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				814DA95223FBDB4A00A4830C /* BBallTriviaSingleton.swift in Sources */,
+				8176B5AE23FD257A00AA368E /* HomeVC.swift in Sources */,
 				814DA94E23FBD5E500A4830C /* SignupVC.swift in Sources */,
 				814DA92223FBC75900A4830C /* ViewController.swift in Sources */,
 				814DA91E23FBC75900A4830C /* AppDelegate.swift in Sources */,

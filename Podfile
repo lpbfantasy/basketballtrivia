@@ -5,6 +5,7 @@ target 'BasketballTrivia' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'Firebase/Auth'
   pod 'IQKeyboardManagerSwift'
+  pod 'SVProgressHUD'
   
   use_frameworks!
 

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 class BBallTriviaSingleton: NSObject
 {
@@ -29,6 +30,24 @@ class BBallTriviaSingleton: NSObject
         }
         
         VC.present(alert, animated: true, completion: nil)
+    }
+    
+    func showLoader()
+    {
+               
+      
+        DispatchQueue.main.async {
+            SVProgressHUD.show()
+            // Bounce back to the main thread to update the UI
+           
+        }
+        
+        
+    }
+    
+    func hideLoader()
+    {
+        SVProgressHUD.dismiss()
     }
     
 }
