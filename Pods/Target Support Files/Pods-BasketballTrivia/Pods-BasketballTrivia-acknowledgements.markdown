@@ -1443,6 +1443,14 @@ This application makes use of the following third party libraries:
    limitations under the License.
 
 
+## Google-Mobile-Ads-SDK
+
+Copyright 2020 Google
+
+## GoogleAppMeasurement
+
+Copyright 2020 Google
+
 ## GoogleDataTransport
 
 

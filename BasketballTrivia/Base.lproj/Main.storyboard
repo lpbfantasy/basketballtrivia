@@ -394,9 +394,22 @@
                                     <constraint firstItem="M1c-0a-IGy" firstAttribute="centerY" secondItem="zXc-AW-ePv" secondAttribute="centerY" id="zgk-PY-nQx"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demoAdd" translatesAutoresizingMaskIntoConstraints="NO" id="RGj-oZ-lA1">
-                                <rect key="frame" x="0.0" y="138" width="414" height="48"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39Z-6E-Mje" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="138" width="414" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RGj-oZ-lA1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="RGj-oZ-lA1" firstAttribute="leading" secondItem="39Z-6E-Mje" secondAttribute="leading" id="QO8-A1-WkT"/>
+                                    <constraint firstAttribute="trailing" secondItem="RGj-oZ-lA1" secondAttribute="trailing" id="W7C-7G-HHH"/>
+                                    <constraint firstAttribute="bottom" secondItem="RGj-oZ-lA1" secondAttribute="bottom" id="ZB2-fc-672"/>
+                                    <constraint firstItem="RGj-oZ-lA1" firstAttribute="top" secondItem="39Z-6E-Mje" secondAttribute="top" id="fiY-Yv-Jpr"/>
+                                    <constraint firstAttribute="height" constant="70" id="hHd-ts-Dfv"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYX-Pv-n4Y">
                                 <rect key="frame" x="30" y="238" width="354" height="430"/>
                                 <subviews>
@@ -632,10 +645,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qQ4-35-faB" firstAttribute="trailing" secondItem="RGj-oZ-lA1" secondAttribute="trailing" id="8eA-Vy-7Br"/>
+                            <constraint firstItem="39Z-6E-Mje" firstAttribute="top" secondItem="zXc-AW-ePv" secondAttribute="bottom" constant="20" id="3H5-kS-pVv"/>
                             <constraint firstItem="AcZ-9K-Nps" firstAttribute="top" secondItem="BYX-Pv-n4Y" secondAttribute="bottom" constant="40" id="CPy-xf-6my"/>
                             <constraint firstAttribute="bottom" secondItem="p3v-sy-ndf" secondAttribute="bottom" id="Fe6-pK-adP"/>
+                            <constraint firstItem="qQ4-35-faB" firstAttribute="leading" secondItem="39Z-6E-Mje" secondAttribute="leading" id="L4w-ED-ttI"/>
                             <constraint firstItem="BYX-Pv-n4Y" firstAttribute="height" secondItem="kBh-2E-4Nb" secondAttribute="height" multiplier="0.48" id="Mk5-Ry-78B"/>
+                            <constraint firstItem="39Z-6E-Mje" firstAttribute="trailing" secondItem="qQ4-35-faB" secondAttribute="trailing" id="Ml3-2U-OuQ"/>
                             <constraint firstItem="p3v-sy-ndf" firstAttribute="leading" secondItem="qQ4-35-faB" secondAttribute="leading" id="Mlq-F6-s4X"/>
                             <constraint firstItem="qQ4-35-faB" firstAttribute="trailing" secondItem="AcZ-9K-Nps" secondAttribute="trailing" constant="40" id="RnC-kv-nDb"/>
                             <constraint firstItem="qQ4-35-faB" firstAttribute="trailing" secondItem="BYX-Pv-n4Y" secondAttribute="trailing" constant="30" id="TDT-KX-IRy"/>
@@ -643,16 +658,15 @@
                             <constraint firstItem="zXc-AW-ePv" firstAttribute="leading" secondItem="qQ4-35-faB" secondAttribute="leading" id="aSg-df-I41"/>
                             <constraint firstItem="BYX-Pv-n4Y" firstAttribute="centerY" secondItem="qQ4-35-faB" secondAttribute="centerY" id="ah0-TM-f4e"/>
                             <constraint firstItem="qQ4-35-faB" firstAttribute="trailing" secondItem="p3v-sy-ndf" secondAttribute="trailing" id="ces-EH-Tbi"/>
-                            <constraint firstItem="RGj-oZ-lA1" firstAttribute="top" secondItem="zXc-AW-ePv" secondAttribute="bottom" constant="20" id="epE-g7-hjF"/>
                             <constraint firstItem="qQ4-35-faB" firstAttribute="trailing" secondItem="zXc-AW-ePv" secondAttribute="trailing" id="lRK-D5-ZkF"/>
                             <constraint firstItem="AcZ-9K-Nps" firstAttribute="leading" secondItem="qQ4-35-faB" secondAttribute="leading" constant="40" id="lhs-0U-Oda"/>
                             <constraint firstItem="zXc-AW-ePv" firstAttribute="top" secondItem="qQ4-35-faB" secondAttribute="top" id="m41-ek-tLO"/>
                             <constraint firstItem="BYX-Pv-n4Y" firstAttribute="leading" secondItem="qQ4-35-faB" secondAttribute="leading" constant="30" id="tFe-j3-kJR"/>
-                            <constraint firstItem="RGj-oZ-lA1" firstAttribute="leading" secondItem="qQ4-35-faB" secondAttribute="leading" id="tkR-dU-5vQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qQ4-35-faB"/>
                     </view>
                     <connections>
+                        <outlet property="adBannerView" destination="39Z-6E-Mje" id="af6-81-cHW"/>
                         <outlet property="viewContainer" destination="BYX-Pv-n4Y" id="it3-Sz-0XK"/>
                     </connections>
                 </viewController>
@@ -663,7 +677,6 @@
     </scenes>
     <resources>
         <image name="background" width="1042" height="703"/>
-        <image name="demoAdd" width="375" height="48"/>
         <image name="playNow" width="340" height="45"/>
         <image name="profile" width="45" height="45"/>
     </resources>

@@ -22,6 +22,7 @@ var window: UIWindow?
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         IQKeyboardManager.shared.enable = true
      //   window?.makeKeyandVisible()
         
