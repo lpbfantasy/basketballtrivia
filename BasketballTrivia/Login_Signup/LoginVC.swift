@@ -50,7 +50,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 
                 UserDefaults.standard.set("\(String(describing: authResult!.user.uid))", forKey: "userId")
                  UserDefaults.standard.set("\(String(describing: authResult!.user.displayName!))", forKey: "userName")
+                if authResult?.user.photoURL != nil
+                {
                 UserDefaults.standard.set("\(String(describing: authResult!.user.photoURL!))", forKey: "ProfilePicture")
+                }
+                else
+                {
+                   UserDefaults.standard.set("", forKey: "ProfilePicture")
+                }
                                
                 
                 //BBallTriviaSingleton.shared.showAlert(title: "Success", message: "Logged in successfully!! \n\nUser id : \(String(describing: authResult!.user.uid))\n UserName: \(String(describing: authResult!.user.displayName!))", twoBtn: false, btn1: "", btn2: "", VC: self!)

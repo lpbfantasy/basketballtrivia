@@ -19,7 +19,7 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
     var ExpandaableRowsOfSection1 = 1
     var ExpandaableRowsOfSection2 = 1
     var ExpandaableRowsOfSection3 = 1
-     var handle: AuthStateDidChangeListenerHandle?
+    var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +37,14 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-          handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-              // ...
-          }
-      }
-      
-      override func viewWillDisappear(_ animated: Bool) {
-          Auth.auth().removeStateDidChangeListener(handle!)
-      }
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            // ...
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(handle!)
+    }
     
     @objc func changeProfilePicture(_ sender: UIButton)
     {
@@ -54,8 +54,8 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
             
             if error == nil
             {
-             UserDefaults.standard.set("\(String(describing: Auth.auth().currentUser!.photoURL!))", forKey: "ProfilePicture")
-            self.tblProfile.reloadSections([0], with: .automatic)
+                UserDefaults.standard.set("\(String(describing: Auth.auth().currentUser!.photoURL!))", forKey: "ProfilePicture")
+                self.tblProfile.reloadSections([0], with: .automatic)
             }
         }
         
@@ -117,13 +117,26 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
             let cell = tblProfile.dequeueReusableCell(withIdentifier: "ProfileTopCellReuse", for: indexPath) as! ProfileTopCell
             cell.btnAddProfile.addTarget(self, action: #selector(changeProfilePicture(_:)), for: .touchUpInside)
             cell.imgProfile.image = UIImage.init(named: "profileAdd")
-        
+            
             if UserDefaults.standard.value(forKey: "ProfilePicture") != nil
             {
-                cell.imgProfile.sd_setImage(with:  URL(string: "\(String(describing: UserDefaults.standard.value(forKey: "ProfilePicture")!))"), completed: nil)
+                if "\(UserDefaults.standard.value(forKey: "ProfilePicture")!)" != ""
+                {
+                    cell.imgProfile.sd_setImage(with:  URL(string: "\(String(describing: UserDefaults.standard.value(forKey: "ProfilePicture")!))"), completed: nil)
+                    cell.cellDict = NSMutableDictionary()
+                }
+                else
+                {
+                    cell.imgProfile.image = UIImage.init(named: "profileAdd")
+                }
             }
-
-            cell.cellDict = NSMutableDictionary()
+            else
+            {
+                cell.imgProfile.image = UIImage.init(named: "profileAdd")
+            }
+            
+            
+            
             return cell
         }
         else if indexPath.section == 1

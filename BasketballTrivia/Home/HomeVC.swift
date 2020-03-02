@@ -37,11 +37,22 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if  UserDefaults.standard.value(forKey: "ProfilePicture") != nil
         {
+            if "\(UserDefaults.standard.value(forKey: "ProfilePicture")!)" != ""
+            {
             if UserDefaults.standard.value(forKey: "ProfilePicture") != nil
             {
                 self.imgProfile.sd_setImage(with:  URL(string: "\(String(describing: UserDefaults.standard.value(forKey: "ProfilePicture")!))"), completed: nil)
             }
             print(UserDefaults.standard.value(forKey: "ProfilePicture")!)
+            }
+            else
+            {
+                self.imgProfile.image = UIImage.init(named: "profile")
+            }
+        }
+        else
+        {
+            self.imgProfile.image = UIImage.init(named: "profile")
         }
                        
     }
