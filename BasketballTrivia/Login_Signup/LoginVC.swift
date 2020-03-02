@@ -21,6 +21,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         txtEmailAddress.delegate = self
         txtPassword.delegate = self
         // Do any additional setup after loading the view.
+        
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -49,6 +50,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 
                 UserDefaults.standard.set("\(String(describing: authResult!.user.uid))", forKey: "userId")
                  UserDefaults.standard.set("\(String(describing: authResult!.user.displayName!))", forKey: "userName")
+                UserDefaults.standard.set("\(String(describing: authResult!.user.photoURL!))", forKey: "ProfilePicture")
+                               
                 
                 //BBallTriviaSingleton.shared.showAlert(title: "Success", message: "Logged in successfully!! \n\nUser id : \(String(describing: authResult!.user.uid))\n UserName: \(String(describing: authResult!.user.displayName!))", twoBtn: false, btn1: "", btn2: "", VC: self!)
             }

@@ -7,6 +7,8 @@ target 'BasketballTrivia' do
   pod 'Firebase/AdMob'
   pod 'IQKeyboardManagerSwift'
   pod 'SVProgressHUD'
+  pod 'ExpandableCell'
+  pod 'SDWebImage'
   
   use_frameworks!
 

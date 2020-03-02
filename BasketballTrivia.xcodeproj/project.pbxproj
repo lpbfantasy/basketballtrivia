@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CDBC88D4B5A6DCCC54B8B4E /* Pods_BasketballTrivia_BasketballTriviaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A6936EDE0FC0F5BBD829C1 /* Pods_BasketballTrivia_BasketballTriviaUITests.framework */; };
+		810506B42408FE3C007BCF11 /* ProfileExpansionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810506B22408FE3C007BCF11 /* ProfileExpansionCell.swift */; };
+		810506B52408FE3C007BCF11 /* ProfileExpansionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810506B32408FE3C007BCF11 /* ProfileExpansionCell.xib */; };
 		814DA91E23FBC75900A4830C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA91D23FBC75900A4830C /* AppDelegate.swift */; };
 		814DA92023FBC75900A4830C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA91F23FBC75900A4830C /* SceneDelegate.swift */; };
 		814DA92223FBC75900A4830C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA92123FBC75900A4830C /* ViewController.swift */; };
@@ -20,6 +22,13 @@
 		814DA95023FBD5F300A4830C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA94F23FBD5F300A4830C /* LoginVC.swift */; };
 		814DA95223FBDB4A00A4830C /* BBallTriviaSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */; };
 		8176B5AE23FD257A00AA368E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176B5AD23FD257A00AA368E /* HomeVC.swift */; };
+		8176CEEC2407DB25003F1FBF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176CEEB2407DB25003F1FBF /* ProfileVC.swift */; };
+		8176CEEF2407E109003F1FBF /* ProfileTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176CEED2407E109003F1FBF /* ProfileTopCell.swift */; };
+		8176CEF02407E109003F1FBF /* ProfileTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176CEEE2407E109003F1FBF /* ProfileTopCell.xib */; };
+		8176CEF32407F568003F1FBF /* ProfileExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176CEF12407F568003F1FBF /* ProfileExpandableCell.swift */; };
+		8176CEF42407F568003F1FBF /* ProfileExpandableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176CEF22407F568003F1FBF /* ProfileExpandableCell.xib */; };
+		8176CEF72407F57E003F1FBF /* ProfileBottomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8176CEF52407F57E003F1FBF /* ProfileBottomCell.swift */; };
+		8176CEF82407F57E003F1FBF /* ProfileBottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8176CEF62407F57E003F1FBF /* ProfileBottomCell.xib */; };
 		819B9F6223FBEE2C0022B612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */; };
 		D2E5224E3E9F005784D04BE8 /* Pods_BasketballTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B595047DBE22462A988CBEC5 /* Pods_BasketballTrivia.framework */; };
 		D8720BE2906073AE3CCAC006 /* Pods_BasketballTriviaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F09A4FC3BDBCF401100D72 /* Pods_BasketballTriviaTests.framework */; };
@@ -44,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		52D315EA63A2BC5C4E84842D /* Pods-BasketballTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTrivia.release.xcconfig"; path = "Target Support Files/Pods-BasketballTrivia/Pods-BasketballTrivia.release.xcconfig"; sourceTree = "<group>"; };
+		810506B22408FE3C007BCF11 /* ProfileExpansionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileExpansionCell.swift; sourceTree = "<group>"; };
+		810506B32408FE3C007BCF11 /* ProfileExpansionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileExpansionCell.xib; sourceTree = "<group>"; };
 		814DA91A23FBC75900A4830C /* BasketballTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasketballTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814DA91D23FBC75900A4830C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		814DA91F23FBC75900A4830C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +73,13 @@
 		814DA94F23FBD5F300A4830C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallTriviaSingleton.swift; sourceTree = "<group>"; };
 		8176B5AD23FD257A00AA368E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8176CEEB2407DB25003F1FBF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		8176CEED2407E109003F1FBF /* ProfileTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTopCell.swift; sourceTree = "<group>"; };
+		8176CEEE2407E109003F1FBF /* ProfileTopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTopCell.xib; sourceTree = "<group>"; };
+		8176CEF12407F568003F1FBF /* ProfileExpandableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileExpandableCell.swift; sourceTree = "<group>"; };
+		8176CEF22407F568003F1FBF /* ProfileExpandableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileExpandableCell.xib; sourceTree = "<group>"; };
+		8176CEF52407F57E003F1FBF /* ProfileBottomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBottomCell.swift; sourceTree = "<group>"; };
+		8176CEF62407F57E003F1FBF /* ProfileBottomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileBottomCell.xib; sourceTree = "<group>"; };
 		819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81D840EAFB3434BD85103E60 /* Pods-BasketballTriviaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.release.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.release.xcconfig"; sourceTree = "<group>"; };
 		8340B81429F4EF77B6F844B0 /* Pods-BasketballTriviaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.debug.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,14 +144,15 @@
 		814DA91C23FBC75900A4830C /* BasketballTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				8176CEEA2407DB0A003F1FBF /* Profile */,
 				8176B5AC23FD255C00AA368E /* Home */,
 				8176B56F23FD140E00AA368E /* Model */,
 				8176B56E23FD13D300AA368E /* Login_Signup */,
 				814DA91D23FBC75900A4830C /* AppDelegate.swift */,
+				814DA92623FBC75A00A4830C /* Assets.xcassets */,
 				814DA91F23FBC75900A4830C /* SceneDelegate.swift */,
 				814DA92123FBC75900A4830C /* ViewController.swift */,
 				814DA92323FBC75900A4830C /* Main.storyboard */,
-				814DA92623FBC75A00A4830C /* Assets.xcassets */,
 				814DA92823FBC75A00A4830C /* LaunchScreen.storyboard */,
 				814DA92B23FBC75A00A4830C /* Info.plist */,
 				819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */,
@@ -182,6 +201,22 @@
 				8176B5AD23FD257A00AA368E /* HomeVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8176CEEA2407DB0A003F1FBF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8176CEEB2407DB25003F1FBF /* ProfileVC.swift */,
+				8176CEED2407E109003F1FBF /* ProfileTopCell.swift */,
+				8176CEEE2407E109003F1FBF /* ProfileTopCell.xib */,
+				8176CEF12407F568003F1FBF /* ProfileExpandableCell.swift */,
+				8176CEF22407F568003F1FBF /* ProfileExpandableCell.xib */,
+				8176CEF52407F57E003F1FBF /* ProfileBottomCell.swift */,
+				8176CEF62407F57E003F1FBF /* ProfileBottomCell.xib */,
+				810506B22408FE3C007BCF11 /* ProfileExpansionCell.swift */,
+				810506B32408FE3C007BCF11 /* ProfileExpansionCell.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		8A12E57E6905782DF12B83EE /* Frameworks */ = {
@@ -318,8 +353,12 @@
 			files = (
 				814DA92A23FBC75A00A4830C /* LaunchScreen.storyboard in Resources */,
 				819B9F6223FBEE2C0022B612 /* GoogleService-Info.plist in Resources */,
+				8176CEF02407E109003F1FBF /* ProfileTopCell.xib in Resources */,
+				8176CEF82407F57E003F1FBF /* ProfileBottomCell.xib in Resources */,
+				8176CEF42407F568003F1FBF /* ProfileExpandableCell.xib in Resources */,
 				814DA92723FBC75A00A4830C /* Assets.xcassets in Resources */,
 				814DA92523FBC75900A4830C /* Main.storyboard in Resources */,
+				810506B52408FE3C007BCF11 /* ProfileExpansionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,11 +487,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				814DA95223FBDB4A00A4830C /* BBallTriviaSingleton.swift in Sources */,
+				8176CEF32407F568003F1FBF /* ProfileExpandableCell.swift in Sources */,
 				8176B5AE23FD257A00AA368E /* HomeVC.swift in Sources */,
+				810506B42408FE3C007BCF11 /* ProfileExpansionCell.swift in Sources */,
 				814DA94E23FBD5E500A4830C /* SignupVC.swift in Sources */,
+				8176CEEF2407E109003F1FBF /* ProfileTopCell.swift in Sources */,
 				814DA92223FBC75900A4830C /* ViewController.swift in Sources */,
+				8176CEEC2407DB25003F1FBF /* ProfileVC.swift in Sources */,
 				814DA91E23FBC75900A4830C /* AppDelegate.swift in Sources */,
 				814DA92023FBC75900A4830C /* SceneDelegate.swift in Sources */,
+				8176CEF72407F57E003F1FBF /* ProfileBottomCell.swift in Sources */,
 				814DA95023FBD5F300A4830C /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
