@@ -12,13 +12,41 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-   
+    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+
+
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if UserDefaults.standard.value(forKey: "userId") != nil
+               {
+                   if "\(UserDefaults.standard.value(forKey: "userId")!)" != ""
+                   {
+                       let loginView = storyboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+                       let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                       loginView.setViewControllers([vc], animated: true)
+                       self.window!.rootViewController = loginView
+                   }
+                   else
+                   {
+                       let loginView = storyboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+                                      let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                                      loginView.setViewControllers([vc], animated: true)
+                                      self.window!.rootViewController = loginView
+                   }
+               }
+               else
+               {
+                   let loginView = storyboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+                   let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                   loginView.setViewControllers([vc], animated: true)
+                   self.window!.rootViewController = loginView
+               }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

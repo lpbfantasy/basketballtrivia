@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ExpandableCell
 import Firebase
 import SDWebImage
 
@@ -15,6 +14,7 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
     
     
     @IBOutlet weak var tblProfile: UITableView!
+    
     
     var ExpandaableRowsOfSection1 = 1
     var ExpandaableRowsOfSection2 = 1
@@ -48,6 +48,7 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
     
     @objc func changeProfilePicture(_ sender: UIButton)
     {
+        BBallTriviaSingleton.shared.showLoader()
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         changeRequest?.photoURL = URL.init(string: "https://i.picsum.photos/id/555/200/300.jpg")
         changeRequest?.commitChanges { (error) in
@@ -57,6 +58,8 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
                 UserDefaults.standard.set("\(String(describing: Auth.auth().currentUser!.photoURL!))", forKey: "ProfilePicture")
                 self.tblProfile.reloadSections([0], with: .automatic)
             }
+            
+            BBallTriviaSingleton.shared.hideLoader()
         }
         
         
@@ -279,6 +282,22 @@ class ProfileVC: UIViewController,UITableViewDelegate, UITableViewDataSource{
     @IBAction func back_action(_ sender: Any) {
         
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func logout_action(_ sender: Any) {
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
+        
+        DispatchQueue.main.async {
+            let loginView = self.storyboard?.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            loginView.setViewControllers([vc], animated: true)
+            self.view.window?.rootViewController = loginView
+            self.view.window?.makeKeyAndVisible()
+        }
+        
     }
     
     

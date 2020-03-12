@@ -17,6 +17,10 @@ class BBallTriviaSingleton: NSObject
         
     }
     
+    
+    var QuestionArray = [[String:String]]()
+    var level = 1
+    
     func showAlert(title: String, message: String, twoBtn: Bool, btn1: String, btn2: String, VC: UIViewController)
     {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
@@ -34,12 +38,20 @@ class BBallTriviaSingleton: NSObject
     
     func showLoader()
     {
-               
-      
         DispatchQueue.main.async {
-            SVProgressHUD.show()
-            // Bounce back to the main thread to update the UI
-           
+             SVProgressHUD.setDefaultMaskType(.custom)
+                       
+                       SVProgressHUD.setBackgroundColor(UIColor.clear)
+                       
+                      SVProgressHUD.setForegroundColor(UIColor(red: 9/255.0, green: 168/255.0, blue: 170/255.0, alpha: 1))
+                       
+                       SVProgressHUD.setRingThickness(10)
+                       SVProgressHUD.setDefaultMaskType(.gradient)
+                       SVProgressHUD.setRingRadius(150)
+                       SVProgressHUD.setOffsetFromCenter(UIOffset(horizontal: 0, vertical: 0))
+                                           
+                       SVProgressHUD.show()
+            
         }
         
         

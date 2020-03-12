@@ -52,7 +52,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
         {
             if txtPassword.text == txtConfirmPassword.text
             {
-               // BBallTriviaSingleton.shared.showLoader()
+                 BBallTriviaSingleton.shared.showLoader()
                 Auth.auth().createUser(withEmail: txtEmail.text ?? "", password: txtPassword.text ?? "") { authResult, error in
                     guard let user = authResult?.user, error == nil else{
                         BBallTriviaSingleton.shared.showAlert(title: "Error", message: error?.localizedDescription ?? "", twoBtn: false, btn1: "", btn2: "", VC: self)
@@ -75,7 +75,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
             }
             else
             {
-                 
+                
                 BBallTriviaSingleton.shared.showAlert(title: "Alert", message: "The two passwords entered do not match!! Please try again.", twoBtn: false, btn1: "", btn2: "", VC: self)
             }
             

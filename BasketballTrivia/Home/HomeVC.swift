@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 
 class HomeVC: UIViewController {
-
+    
     
     @IBOutlet weak var adBannerView: GADBannerView!
     @IBOutlet weak var viewContainer: UIView!
@@ -19,7 +19,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         viewContainer.layer.cornerRadius = 20
         viewContainer.clipsToBounds = true
@@ -28,7 +28,7 @@ class HomeVC: UIViewController {
         imgProfile.clipsToBounds = true
         
         BBallTriviaSingleton.shared.showAlert(title: "Success", message: "User Id: \(UserDefaults.standard.value(forKey: "userId")!)\n UserName: \(UserDefaults.standard.value(forKey: "userName")!)", twoBtn: false, btn1: "", btn2: "", VC: self)
-      
+        
         adBannerView.adUnitID = "ca-app-pub-2483571791994176/5498549479"
         adBannerView.rootViewController = self
         adBannerView.load(GADRequest())
@@ -39,11 +39,11 @@ class HomeVC: UIViewController {
         {
             if "\(UserDefaults.standard.value(forKey: "ProfilePicture")!)" != ""
             {
-            if UserDefaults.standard.value(forKey: "ProfilePicture") != nil
-            {
-                self.imgProfile.sd_setImage(with:  URL(string: "\(String(describing: UserDefaults.standard.value(forKey: "ProfilePicture")!))"), completed: nil)
-            }
-            print(UserDefaults.standard.value(forKey: "ProfilePicture")!)
+                if UserDefaults.standard.value(forKey: "ProfilePicture") != nil
+                {
+                    self.imgProfile.sd_setImage(with:  URL(string: "\(String(describing: UserDefaults.standard.value(forKey: "ProfilePicture")!))"), completed: nil)
+                }
+                print(UserDefaults.standard.value(forKey: "ProfilePicture")!)
             }
             else
             {
@@ -54,18 +54,28 @@ class HomeVC: UIViewController {
         {
             self.imgProfile.image = UIImage.init(named: "profile")
         }
-                       
-    }
-   
-    @IBAction func Profile_action(_ sender: Any) {
-        if #available(iOS 13.0, *) {
-                   let vc = storyboard?.instantiateViewController(identifier: "ProfileVC") as! ProfileVC
-                   self.navigationController?.pushViewController(vc, animated: true)
-               } else {
-                  let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
-                              self.navigationController?.pushViewController(vc, animated: true)
-               }
+        
     }
     
-
+    @IBAction func Profile_action(_ sender: Any) {
+        if #available(iOS 13.0, *) {
+            let vc = storyboard?.instantiateViewController(identifier: "ProfileVC") as! ProfileVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    
+    @IBAction func playNow_action(_ sender: Any) {
+        if #available(iOS 13.0, *) {
+            let vc = storyboard?.instantiateViewController(identifier: "QuestionVC") as! QuestionVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "QuestionVC") as! QuestionVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }

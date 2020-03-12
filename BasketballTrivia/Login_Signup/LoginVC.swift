@@ -33,37 +33,39 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func login_action(_ sender: Any) {
         
+         BBallTriviaSingleton.shared.showLoader()
         Auth.auth().signIn(withEmail: txtEmailAddress.text ?? "", password: txtPassword.text ?? "") { [weak self] authResult, error in
             if error != nil {
                 BBallTriviaSingleton.shared.showAlert(title: "Error", message: error?.localizedDescription ?? "", twoBtn: false, btn1: "", btn2: "", VC: self!)
-
+                BBallTriviaSingleton.shared.hideLoader()
             }
             else
             {
+                BBallTriviaSingleton.shared.hideLoader()
                 if #available(iOS 13.0, *) {
                     let vc = self?.storyboard?.instantiateViewController(identifier: "HomeVC") as! HomeVC
-                           self?.navigationController?.pushViewController(vc, animated: true)
-                       } else {
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                } else {
                     let vc = self?.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
                     self?.navigationController?.pushViewController(vc, animated: true)
-                       }
+                }
                 
                 UserDefaults.standard.set("\(String(describing: authResult!.user.uid))", forKey: "userId")
-                 UserDefaults.standard.set("\(String(describing: authResult!.user.displayName!))", forKey: "userName")
+                UserDefaults.standard.set("\(String(describing: authResult!.user.displayName!))", forKey: "userName")
                 if authResult?.user.photoURL != nil
                 {
-                UserDefaults.standard.set("\(String(describing: authResult!.user.photoURL!))", forKey: "ProfilePicture")
+                    UserDefaults.standard.set("\(String(describing: authResult!.user.photoURL!))", forKey: "ProfilePicture")
                 }
                 else
                 {
-                   UserDefaults.standard.set("", forKey: "ProfilePicture")
+                    UserDefaults.standard.set("", forKey: "ProfilePicture")
                 }
-                               
                 
-                //BBallTriviaSingleton.shared.showAlert(title: "Success", message: "Logged in successfully!! \n\nUser id : \(String(describing: authResult!.user.uid))\n UserName: \(String(describing: authResult!.user.displayName!))", twoBtn: false, btn1: "", btn2: "", VC: self!)
+                
+                
             }
-
-
+            
+            
         }
     }
     
@@ -73,8 +75,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             let vc = storyboard?.instantiateViewController(identifier: "SignupVC") as! SignupVC
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
-           let vc = storyboard?.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
-                       self.navigationController?.pushViewController(vc, animated: true)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
     }
