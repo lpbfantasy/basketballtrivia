@@ -28,6 +28,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         IQKeyboardManager.shared.enable = true
         
+        if UserDefaults.standard.value(forKey: "userId") != nil
+        {
+            if "\(UserDefaults.standard.value(forKey: "userId")!)" != ""
+            {
+                let loginView = storyboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+                let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                loginView.setViewControllers([vc], animated: true)
+                self.window!.rootViewController = loginView
+            }
+            else
+            {
+                let loginView = storyboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+                let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                loginView.setViewControllers([vc], animated: true)
+                self.window!.rootViewController = loginView
+            }
+        }
+        else
+        {
+            let loginView = storyboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            loginView.setViewControllers([vc], animated: true)
+            self.window!.rootViewController = loginView
+        }
+        
         
         return true
     }

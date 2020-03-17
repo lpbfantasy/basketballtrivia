@@ -86,12 +86,42 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 BBallTriviaSingleton.shared.QuestionArray = response?.value(forKey: "data") as? [[String:String]] ?? []
                 DispatchQueue.main.async {
                     self.tblQuestion.reloadData()
-            }
+                    self.runTimer()
+                }
             }
         })
     }
     
-  
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTimer() {
+        
+        if seconds > 0
+        {
+            seconds -= 1     //This will decrement(count down)the seconds.
+            lblTimer.text = "\(seconds)" //This will update the label.
+        }
+        else
+        {
+            if correctAnswer == ""
+            {
+                var myDict = NSMutableDictionary()
+                if BBallTriviaSingleton.shared.QuestionArray.count > 0
+                {
+                    myDict = (BBallTriviaSingleton.shared.QuestionArray[questionNumber - 1] as AnyObject).mutableCopy() as! NSMutableDictionary
+                    if let _ =  myDict.value(forKey: "answer")
+                    {
+                        correctAnswer = String(describing: myDict.value(forKey: "answer")!)
+                    }
+                    
+                }
+                
+                tblQuestion.reloadData()
+            }
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -132,7 +162,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             {
                 cell.backgroundColor = UIColor.green
             }
-            else if cell.lblAnswer.text! == wrongAnswer
+            else if cell.lblAnswer.text! == wrongAnswer && correctAnswer != ""
             {
                 cell.backgroundColor = UIColor.red
             }
@@ -151,7 +181,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             {
                 cell.backgroundColor = UIColor.green
             }
-            else if cell.lblAnswer.text! == wrongAnswer
+            else if cell.lblAnswer.text! == wrongAnswer && correctAnswer != ""
             {
                 cell.backgroundColor = UIColor.red
             }
@@ -169,7 +199,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             {
                 cell.backgroundColor = UIColor.green
             }
-            else if cell.lblAnswer.text! == wrongAnswer
+            else if cell.lblAnswer.text! == wrongAnswer && correctAnswer != ""
             {
                 cell.backgroundColor = UIColor.red
             }
@@ -187,7 +217,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             {
                 cell.backgroundColor = UIColor.green
             }
-            else if cell.lblAnswer.text! == wrongAnswer
+            else if cell.lblAnswer.text! == wrongAnswer && correctAnswer != ""
             {
                 cell.backgroundColor = UIColor.red
             }
@@ -198,7 +228,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-       
+        secondsLeft = Int("\(lblTimer.text!)")!
         var value = 0
         if indexPath.row > 0
         {
@@ -219,13 +249,15 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if cell.lblAnswer.text! == correctAnswer
                 {
                     wrongAnswer = ""
-                    
+                    score += secondsLeft * value
+                    correctQuestions += 1
                 }
                 else
                 {
                     wrongAnswer = cell.lblAnswer.text!
                 }
-                
+                timer.invalidate()
+                seconds = 20
                 tblQuestion.reloadData()
             }
         }
@@ -234,11 +266,11 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0
         {
-            return 74
+            return 70
         }
         else
         {
-            return 58
+            return 50
         }
     }
     
@@ -249,14 +281,18 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         {
             if correctAnswer != ""
             {
-                          
+                timer.invalidate()
+                seconds = 20
+                runTimer()
                 correctAnswer = ""
                 wrongAnswer = ""
                 questionNumber = questionNumber + 1
                 lblQuestionNumber.text = "\(questionNumber)/10"
+                
                 tblQuestion.reloadData()
-                   
-               
+                
+                
+                print ("score: \(score)")
             }
             else
             {
@@ -266,13 +302,36 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         else
         {
-           
+            if correctQuestions >= 7
+            {
+                lblResultMessage.text = "Congratulations!!! You have successfully cleared level \(BBallTriviaSingleton.shared.level)"
+                lblCorrectAnswers.text = "Correct Answers: \(correctQuestions)"
+                lblScore.text = "Your score is: \(score)"
+                BBallTriviaSingleton.shared.level = BBallTriviaSingleton.shared.level + 1
+                btnPlayAgain.setTitle("Play Next Level", for: .normal)
+            }
+            else
+            {
+                lblResultMessage.text = "Sorry!! You have failed level:  \(BBallTriviaSingleton.shared.level)"
+                lblCorrectAnswers.text = "Correct Answers: \(correctQuestions)"
+                lblScore.text = "Your score is: \(score)"
+                btnPlayAgain.setTitle("Play Again", for: .normal)
+            }
+            self.btnSubmit.isHidden = true
+            self.resultView.isHidden = false
             
         }
     }
     
     @IBAction func playAgain_action(_ sender: Any) {
-      
+        //        if correctQuestions >= 7
+        //        {
+        //
+        //        }
+        //        else
+        //        {
+        //
+        //        }
         self.btnSubmit.isHidden = false
         self.resultView.isHidden = true
         questionNumber = 1
