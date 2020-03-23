@@ -37,6 +37,7 @@
 		818C06F52411039F0012D59E /* APIClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818C06F42411039F0012D59E /* APIClass.swift */; };
 		819B9F6223FBEE2C0022B612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */; };
 		81A6CB47240E2FA800E381FC /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6CB46240E2FA800E381FC /* QuestionVC.swift */; };
+		81BBCF2F24236B9900735E52 /* CloudinaryModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BBCF2E24236B9900735E52 /* CloudinaryModelClass.swift */; };
 		D2E5224E3E9F005784D04BE8 /* Pods_BasketballTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B595047DBE22462A988CBEC5 /* Pods_BasketballTrivia.framework */; };
 		D8720BE2906073AE3CCAC006 /* Pods_BasketballTriviaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F09A4FC3BDBCF401100D72 /* Pods_BasketballTriviaTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		818C06F42411039F0012D59E /* APIClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClass.swift; sourceTree = "<group>"; };
 		819B9F6123FBEE2C0022B612 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A6CB46240E2FA800E381FC /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
+		81BBCF2E24236B9900735E52 /* CloudinaryModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryModelClass.swift; sourceTree = "<group>"; };
 		81D840EAFB3434BD85103E60 /* Pods-BasketballTriviaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.release.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.release.xcconfig"; sourceTree = "<group>"; };
 		8340B81429F4EF77B6F844B0 /* Pods-BasketballTriviaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasketballTriviaTests.debug.xcconfig"; path = "Target Support Files/Pods-BasketballTriviaTests/Pods-BasketballTriviaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89F09A4FC3BDBCF401100D72 /* Pods_BasketballTriviaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasketballTriviaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 				814DA95123FBDB4A00A4830C /* BBallTriviaSingleton.swift */,
 				818C06F2241102210012D59E /* ModelClass.swift */,
 				818C06F42411039F0012D59E /* APIClass.swift */,
+				81BBCF2E24236B9900735E52 /* CloudinaryModelClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				8176CEF32407F568003F1FBF /* ProfileExpandableCell.swift in Sources */,
 				818C06F3241102210012D59E /* ModelClass.swift in Sources */,
 				8176B5AE23FD257A00AA368E /* HomeVC.swift in Sources */,
+				81BBCF2F24236B9900735E52 /* CloudinaryModelClass.swift in Sources */,
 				818C06F02410E9CA0012D59E /* AnswerOptionCell.swift in Sources */,
 				818C06EC2410E9570012D59E /* QuestionCell.swift in Sources */,
 				810506B42408FE3C007BCF11 /* ProfileExpansionCell.swift in Sources */,

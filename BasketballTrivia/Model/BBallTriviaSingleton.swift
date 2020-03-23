@@ -17,6 +17,12 @@ class BBallTriviaSingleton: NSObject
         
     }
     
+    //SignUp
+    var userId = ""
+    var userName = ""
+    var profilePic = ""
+    var profileImage = UIImage()
+    
     
     var QuestionArray = [[String:String]]()
     var level = 1

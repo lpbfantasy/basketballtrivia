@@ -178,7 +178,7 @@ class apiManager: NSObject {
         
         
     }
-    func postApiRequest (controller:UIViewController, method:String, parameters:NSDictionary, completionHandler: @escaping ((_ json: AnyObject?, _ success:Bool) -> Void)) {
+    func postApiRequest (controller:UIViewController, method:String, parameters:[String:Any], completionHandler: @escaping ((_ json: AnyObject?, _ success:Bool) -> Void)) {
         if isConnectedToNetwork()  {
             
             SVProgressHUD.setDefaultMaskType(.custom)

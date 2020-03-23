@@ -7,9 +7,9 @@ target 'BasketballTrivia' do
   pod 'Firebase/AdMob'
   pod 'IQKeyboardManagerSwift'
   pod 'SVProgressHUD'
-
+  pod 'Cloudinary', '2.5'
   pod 'SDWebImage'
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.7.3'
   
   use_frameworks!
 

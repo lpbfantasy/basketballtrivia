@@ -54,6 +54,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
+        //Cloudinary
+        do {
+            try FileManager.default.createDirectory(
+                at: URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("upload"),
+                withIntermediateDirectories: true,
+                attributes: nil)
+        } catch {
+                   print("Creating 'upload' directory failed. Error: \(error)")
+               }
+        
         return true
     }
     

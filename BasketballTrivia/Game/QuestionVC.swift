@@ -44,6 +44,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var secondsLeft = 0
     var level = 1
     
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,7 +71,9 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         adBannerView.adUnitID = "ca-app-pub-2483571791994176/5498549479"
               adBannerView.rootViewController = self
               adBannerView.load(GADRequest())
-        // Do any additional setup after loading the view.
+        
+        
+       // Do any additional setup after loading the view.
     }
     
     func getQuestions()
@@ -332,6 +335,8 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //        {
         //
         //        }
+       
+                
         self.btnSubmit.isHidden = false
         self.resultView.isHidden = true
         questionNumber = 1
